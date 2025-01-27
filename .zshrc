@@ -33,6 +33,10 @@ source <(fzf --zsh)
 bindkey -v
 bindkey ^R history-incremental-search-backward
 bindkey ^S history-incremental-search-forward
+#bindkey              '^I' menu-select
+#bindkey "$terminfo[kcbt]" menu-select
+bindkey "^I" complete-word
+bindkey "$terminfo[kcbt]" menu-select
 
 #History
 export HISTFILE=~/.histfile
@@ -47,3 +51,9 @@ setopt appendhistory
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/Richard/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/Richard/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
