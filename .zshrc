@@ -23,11 +23,8 @@ alias public_ip='curl --ipv4 ifconfig.me'
 alias public_ip6='curl --ipv6 ifconfig.me'
 alias aria2c='aria2c -s16 -x16'
 alias tb="nc termbin.com 9999"
-alias wg="sudo wg"
+alias wg-quick="sudo wg-quick"
 alias less="less -R"
-alias rm="rm --interactive=never"
-alias sync_status="watch -d grep -e Dirty: -e Writeback: /proc/meminfo"
-alias rsync_backup="rsync -aAXHv --exclude='/dev/*' --exclude='/proc/*' --exclude='/sys/*' --exclude='/tmp/*' --exclude='/run/*' --exclude='/mnt/*' --exclude='/media/*' --exclude='/lost+found/'"
 
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -36,8 +33,10 @@ source <(fzf --zsh)
 bindkey -v
 bindkey ^R history-incremental-search-backward
 bindkey ^S history-incremental-search-forward
-bindkey "^I" menu-complete
-bindkey "$terminfo[kcbt]" reverse-menu-complete
+#bindkey              '^I' menu-select
+#bindkey "$terminfo[kcbt]" menu-select
+bindkey "^I" complete-word
+bindkey "$terminfo[kcbt]" menu-select
 
 #History
 export HISTFILE=~/.histfile
@@ -52,3 +51,9 @@ setopt appendhistory
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/Richard/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/Richard/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
