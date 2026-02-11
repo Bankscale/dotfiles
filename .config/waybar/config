@@ -6,7 +6,8 @@
   "modules-left": [
   "hyprland/workspaces",
   "custom/uptime",
-  "cpu"
+  "cpu",
+  "tray" 
   ],
 
   "modules-center": ["clock"],
@@ -20,12 +21,35 @@
     "battery",
   ],
 
+
   "hyprland/workspaces": {
     "format": "{name}: {icon}",
     "format-icons": {
       "active": "",
       "default": ""
     }
+  },
+
+  "tray": {
+        "spacing": 10
+    },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Kitty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+    },
   },
 
   "bluetooth": {
@@ -53,9 +77,9 @@
     },
 
   "clock": {
-    "timezone": "Asia/Kolkata",
+    "timezone": "America/Chicago",
     "tooltip": false,
-    "format": "{:%H:%M:%S  -  %A, %d}",
+    "format": "{:%H:%M:%S  -  %A %m/%d}",
     "interval": 1
   },
 
