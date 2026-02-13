@@ -143,6 +143,7 @@
 #backlight,
 #custom-music,
 #network,
+#custom-power,
 #custom-lock,
 #battery {
   background-color: #1a1b26;
@@ -171,7 +172,7 @@
   border-bottom-left-radius: 6px;
 }
 
-#pulseaudio {
+#custom-power {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   margin-right: 7px;

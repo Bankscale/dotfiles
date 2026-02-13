@@ -57,3 +57,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 [[ -f /home/Richard/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/Richard/.config/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+export PATH=/home/richard/.local/bin:$PATH
