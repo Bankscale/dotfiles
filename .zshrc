@@ -25,6 +25,7 @@ alias aria2c='aria2c -s16 -x16'
 alias tb="nc termbin.com 9999"
 alias wg-quick="sudo wg-quick"
 alias less="less -R"
+alias bios='systemctl reboot --firmware-setup'
 
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
