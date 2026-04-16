@@ -46,17 +46,5 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 setopt appendhistory
 
-# bun completions
-[ -s "/home/tobi/.bun/_bun" ] && source "/home/tobi/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/Richard/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/Richard/.config/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 export PATH=/home/richard/.local/bin:$PATH
